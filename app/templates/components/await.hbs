@@ -1,0 +1,19 @@
+{{#if this.isRunning}}
+  loading
+{{else if this.isError}}
+  <div data-test-error-state>
+    some error
+  </div>
+{{else}}
+  {{#if this.content}}
+    {{yield this.content}}
+  {{else}}
+    {{#if (has-block "inverse")}}
+      {{yield to="inverse"}}
+    {{else}}
+      <div data-test-empty-state>
+        empty
+      </div>
+    {{/if}}
+  {{/if}}
+{{/if}}
