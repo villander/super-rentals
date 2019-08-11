@@ -6,9 +6,9 @@
   }}
 </div>
 
-<Await @promise={{this.rentals}} as |records|>
+<Await @promise={{this.rentals}} as |rentals|>
   <ul class="results">
-    {{#each records.results as |rental|}}
+    {{#each rentals as |rental|}}
       <li class="rental">
         <article class="listing">
           <a

@@ -11,14 +11,8 @@ export default Component.extend({
   rentals: computed('value', function () {
     if (this.value !== '') {
       return this.store.query('rental', { city: this.value })
-        .then((results) => {
-          return { query: this.value, results: results };
-        });
     } else {
       return this.store.findAll('rental')
-        .then((results) => {
-          return { query: this.value, results: results };
-        });
     }
   }),
 
