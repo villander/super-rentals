@@ -1,11 +1,11 @@
 {{#if this.isRunning}}
-  loading
+  <i data-test-loading-state>loading</i>
 {{else if this.isError}}
   <div data-test-error-state>
     some error
   </div>
 {{else}}
-  {{#if this.content}}
+  {{#if (or this.content (not this.emptyState))}}
     {{yield this.content}}
   {{else}}
     {{#if (has-block "inverse")}}

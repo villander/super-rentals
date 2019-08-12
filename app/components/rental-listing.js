@@ -14,11 +14,5 @@ export default Component.extend({
     } else {
       return this.store.findAll('rental')
     }
-  }),
-
-  actions: {
-    toggleImageSize() {
-      this.toggleProperty('isWide');
-    }
-  },
+  })
 });
